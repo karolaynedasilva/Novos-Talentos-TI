@@ -1,0 +1,664 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-laranja: #f26419;
+    --cor-azul:#33658a;
+    --cor-rosa: #e71d36;
+    --cor-amarelo:#ff9f1c;
+
+    --font-body:'Josefin Sans', sans-serif;
+    --font-titulo:'Berkshire Swash', cursive;
+    --font-subtitulo: 'Roboto', sans-serif;
+    --font-cardapio: 'Raleway', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+}
+a.return{
+    text-align: center;
+    text-decoration: none;
+    color: #111111;
+    font-size: 1rem;
+    margin-top: 5%;
+}
+body{
+    font-family: var(--font-body);  
+}
+/*HOME PAGE*/
+h1#mangia{
+    color: #fff;
+    text-align: center;
+
+    font-size: 4rem;
+    font-family: var(--font-titulo);
+}
+h2{
+    text-align: center;
+    margin-top: 5%;
+    color: var(--cor-amarelo);
+}
+span{
+    opacity: 100%;
+}
+header{
+    margin: auto;
+    background-color: #111111;
+    height: 3rem;
+}
+header ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-top: 0.5%; 
+}
+header ul li {
+    margin: auto; 
+}
+header#home a{   
+    text-decoration: none;
+    color: aliceblue;
+}
+header#home a:hover{
+    color: #ff9f1c;
+}
+div#backpizza h1{
+    padding-top: 10%;
+}
+div#backpizza{
+    font-family: var(--font-body);
+    background: #e71d36 url("img/istockphoto-500197996-612x612.jpg") left bottom  / cover no-repeat fixed ;
+    height: 70vh;
+    position: relative;
+    isolation: isolate;
+}
+div#backpizza::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .5;
+}
+div#info{
+    display: grid;
+    grid-template: 
+    'rua botao '
+    'jlle . '
+    'pagamento pagamento '
+    'tabelinha tabelinha ';
+ 
+    padding: 2%;
+    text-align: center;
+    background-color: #fff;
+}
+div#info a{
+    color: #f26419;
+    text-decoration: none;
+    grid-area: rua;
+    font-size: 2vw;
+}
+div#info h1{
+    grid-area: jlle;
+}
+section#pagamentos {
+    grid-area: pagamento;
+    margin-top: 5%;
+}
+div#info button{
+    grid-area: botao;
+    max-width: 15vw;
+}
+div#info a#email{
+    grid-area: botao;
+    margin-left: 50%;
+    font-size: 1.4rem;
+    color: white;
+    font-family: var(--font-body);
+    width: 45%;
+}
+div.ofertas{ 
+    display: grid;
+    grid-template: 
+    'titulo img'
+    'imgpizza img';
+    background: #fff;
+    padding: 5% 20% 5% 20% ;
+}
+div.ofertas img#pizza {
+    width: 100%;
+    margin-left: 20%;
+}
+div.tabelinha {
+    display:flex;
+    grid-area: tabelinha; 
+}
+div.tabelinha section{
+    width: 40%;
+    justify-content: space-around;
+}
+section.bloco{
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 2%;
+    margin-top: 5%;
+    height: 50%; 
+}
+section.bloco h5{
+    margin-top: 5%;
+}
+section.bloco:hover{
+    border-color:var(--cor-laranja) ;
+    cursor: pointer;
+}
+div.ofertas div#horario {
+    margin-left: 10%;
+}
+div.ofertas div#horario img{
+    margin-top: 10%;
+    min-width: 200px;
+    height: 800px;
+    grid-area: img;
+    border-radius: 10px;
+}
+div.ofertas a#linklinha{
+    text-decoration: none;
+    color: #e66119;
+}
+article h2{
+    margin: 0;
+    color: var(--cor-laranja);
+    font-size: 2.5rem;
+}
+article p{
+    margin: 5%;
+    font-size: 1.7em;
+
+    width: 100%;
+}
+h3{
+    font-family: var(--font-subtitulo);
+    font-weight: 500;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 1.5vw;
+}
+div.pratos{
+    margin-top:5% ;
+}
+div#cardapio{
+    background:#ffffff url("img/homepageback.jpg") center center / 30% repeat fixed;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+}
+div#cardapio::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .3;
+}
+div#cardapio h1{
+
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    
+}
+div#cardapio > article#menu{
+    background-color:#f7f7f7 ;
+    margin: 15%;
+    padding: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+article#menu{
+    display: grid;
+    justify-content: space-between;
+
+}
+div#combos{
+    background-color: #fff;
+
+}
+div#combos h1{
+    color: var(--cor-laranja);
+    font-family: var(--font-titulo);
+}
+article#menu h1{
+    font-family: var(--font-titulo);
+    font-size: 4rem;
+}
+div#cardapio div.pratos img{
+    width: 200px;
+    height: 150px;
+    border-radius: 7px;
+}
+div.pratos{
+    display: grid;
+    grid-template: 
+    'prato1 titulo'
+    'prato2 titulo'
+    'prato3 titulo'
+    'prato4 titulo';
+}
+div.pratos h2{
+    grid-area: titulo;
+
+}
+div.pratos span{
+    grid-area: titulo;
+    margin:5% ;
+    width: 80%;
+    height: 50%;
+}
+/*PAGINA SOBRE NÓS*/
+body#sobre h1{
+    text-align: center;
+    margin-top: 5%;
+}
+img#sobrenos{
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+}
+body#sobre{
+    background-color: #fff;
+}
+div#sobrenos h1{
+    color: white;
+    font-family: var(--font-cardapio);
+    font-variant-caps: all-small-caps;
+    font-size: 5rem;
+    text-align:justify;
+
+}
+div#sobrenos p{
+    text-align: center;
+    width: 50%;
+}
+div#nossotrabalho{
+    background-color: #fff;
+    display: grid;
+    grid-template:
+    'titulo1 .'
+    'texto1 img1'
+    'texto2 img2' ;
+    margin: auto;
+    padding: 5% 20% 5% 20%;
+}
+div#nossotrabalho p#p1{
+    grid-area: texto1;
+    width: 90%;
+    margin: 5%;
+    font-size: 3vh;
+    display: flex;
+    margin: auto;
+}
+div#nossotrabalho img#img1{
+    grid-area: img1;
+    height: 60vh ;
+    border-radius: 10px;
+    box-shadow: #e66119 20px 20px;
+    display: flex;
+}
+div#nossotrabalho h1{
+    color:#e66119 ;
+}
+div.faleconosco{
+    background: url("img/pizza-back-1.png")  top left  / cover repeat fixed;
+    height: 50vh;
+    position: relative;
+    isolation: isolate;
+}
+div.faleconosco::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .3;
+}
+div.faleconosco h1{
+    font-size: 7rem;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+
+}
+div.faleconosco h4{
+
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-variant-caps: all-small-caps;
+}
+div.faleconosco#header{
+    margin-top: 0;
+    background:url("img/teste.jpg")  top left  / cover repeat fixed;
+}
+div.faleconosco#header h4{
+    padding-top: 10%;
+    font-size: 2rem;
+    font-variant-caps: all-small-caps;
+}
+
+div#novo{
+    background-color: white;
+    display: grid;
+    grid-template: 
+    'titulo'
+    'divs';
+    height: 90vh;
+    padding-bottom: 5%;
+}
+div#novo h2.novo{
+    color: #fff;
+    font-variant-caps: all-small-caps;
+    font-weight: 700;
+}
+div#novo h1{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 5%;
+    font-family: var(--font-titulo);
+}
+div#novo a.click{
+    width: 300px;
+    height: 500px;
+}
+
+div#novo div.divs{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    
+}
+div#novo div.divs section{
+    margin: 10px;
+    width: 300px;
+    height: 500px;
+}
+div.divs section:hover{
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+div#novo div.divs section#div1{
+    background:url("img/happyhour.jpg")  center center  / cover repeat ;
+    background-color: #f5ebe0;
+    position: relative;
+    isolation: isolate;
+    width: 300px;
+    height: 500px;
+}
+div#novo div.divs section#div1::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .4;
+}
+div#novo div.divs section#div2{
+    background:url("img/almocoexecutivo.jpg")  center center  / cover repeat ;
+    background-color: #f5ebe0;
+    position: relative;
+    isolation: isolate;
+    width: 300px;
+    height: 500px;
+}
+div#novo div.divs section#div2::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .4;
+}
+
+div#novo div.divs section#div3{
+    background:url("img/delivery.jpg")  center center  / cover repeat ;
+    background-color: #f5ebe0;
+    position: relative;
+    isolation: isolate;
+    width: 300px;
+    height: 500px;
+}
+div#novo div.divs section#div3::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .4;
+}
+
+/*PAGINA CARADAPIO*/
+body#menu{
+  background:url("img/white-concrete-wall_53876-92803.webp")  top left  / cover repeat fixed;
+  background-color: #f5ebe0;
+  position: relative;
+  isolation: isolate;
+
+}
+body#menu::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #111111;
+    opacity: .1;
+}
+h1.titulocardapio{
+    font-family: var(--font-cardapio);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+} 
+span ul {
+    margin-top: 2%;
+    text-align: center;
+
+}
+div#menucardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul li{
+    font-size: 1.5rem;
+    margin-top: 5%;
+    text-align: start;
+    list-style-type: none;
+}
+h2#h2menu{
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #f26419;
+}
+
+/*PAGINA SERVIÇO*/
+div#headerdelivery{
+    background:url("img/header.png")  top right  / 100% no-repeat local;
+    height: 50vh;
+    display: flex;
+}
+div#headerdelivery h1{
+    margin: auto;
+    color: #e66119;
+    font-family: var(--font-cardapio);
+    font-size: 4rem;
+    letter-spacing: 2px;
+    
+}
+div#promocoes{
+    margin: auto;
+    height: 40vh;
+    display: grid;  
+}
+div#promocoes section#folders{
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    margin: auto;
+}
+section#folders article {
+    width: 450px;
+    height: 300px;
+    padding: 1%;
+    
+}
+section#folders article img{
+    width: 90%;
+    border-radius: 7px; 
+}
+
+header#servico{
+    background-color: black;
+}
+header#servico ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding-top: 1%;
+}
+header#servico ul li a:hover{
+    color: #e66119;
+}
+div#borda{
+    background: url("img/borda.jpg")  top left  / cover no-repeat fixed;
+}
+div#delivery{
+    height: 90vh;
+    display: grid;
+    grid-template:'texto img' ;
+    width: 90%;
+    margin: auto;
+    background:url("img/delivery.png") center left / 100% no-repeat local;
+    margin-bottom: 5%;
+
+}
+
+h2#delivery{
+    color: #e71d36;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-variant-caps: all-small-caps;
+    margin-bottom: 5%;
+}
+h2#happyhour{
+    color: #e71d36;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-variant-caps: all-small-caps;
+    margin: 2%;
+}
+div#happyhour{
+    height: 70vh;
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template: 'img text';
+}
+div#happyhour img{
+    width: 800px;
+    grid-area: img;
+    border-radius: 8px;  
+    margin-right:40% ;
+}
+div#happyhour section#txt h1{
+    text-align: center;
+    font-family: var(--font-titulo);
+    font-size: 2.5rem;
+}
+div#happyhour section#txt h3{
+    margin: 1%;
+    color: #e66119;
+}
+div#happyhour section#txt p{
+    margin: 5%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+div.areturn{
+    display: flex;
+}
+div.areturn a{
+    margin: auto;
+    padding-bottom: 2%;
+}
+/*PAGINA CONTATO*/
+body#contato{
+    background: #111111 url("img/tasty-fresh-appetizing-italian-food-ingredients-on-dark-background-ready-to-cook-home-italian-healthy-food-cooking-concept-toning.jpg") left bottom / 100% no-repeat local;
+    height: 100vh;
+}
+main{
+    border-radius: 10px;
+    height: 80vh;
+    margin: auto;
+    width: 960px;
+    background-color: rgb(248, 247, 247);
+    margin-bottom: 5%;
+}
+main h1{
+    margin-top: 5%;
+    font-family: var(--font-titulo);
+    font-size: 4rem;
+    padding: 2%;
+    text-align: center;
+}
+main a{
+    text-decoration: none;
+    margin-top: 5%;
+    color: #111111;
+    padding: 2%;
+}
+main a.return{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12%;
+}
+section.contato{
+    display: grid;
+    grid-template: 
+    'titulo'
+    'contato';
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+section.contato a{
+    width:100%;
+}
+main section a:hover{
+    background-color: #6d6d6d17;
+    padding: 2%;
+    border-radius: 5px;
+}
+div#icons {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+div#icons img{
+    margin-top: 55%;
+    height:150px ;
+}
